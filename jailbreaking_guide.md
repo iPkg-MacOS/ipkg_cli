@@ -16,6 +16,10 @@ Now reload your terminal windows.
 ## Step 4
 Run `su` and enter your password, then run `echo "" > /System/Library/Sandbox/rootless.conf`.
 ## Step 5
+If there is no /opt:
+```bash
+mkdir /opt/
+```
 Create the Needed Directories:
 ```bash
 mkdir /opt/packages/
