@@ -8,7 +8,7 @@ Hold Down the Power Button until your Mac turns off. Then Release and Hold down 
 Go to Utilities/Terminal in the menu and type `csrutil disable` into the console.
 ## Step 3
 Congrats! You have Jailbroken your Mac! Boot back into MacOS and download the ipkg.py file, then install it with the following commands:
-```
+```bash
 sudo mv <path/to/ipkg.py/file> /usr/local/bin/ipkg
 sudo chmod +x /usr/local/bin/ipkg
 ```
