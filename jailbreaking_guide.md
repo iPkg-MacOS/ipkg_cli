@@ -15,4 +15,10 @@ sudo chmod +x /usr/local/bin/ipkg
 Now reload your terminal windows.
 ## Step 4
 Run `su` and enter your password, then run `echo "" > /System/Library/Sandbox/rootless.conf`.
+## Step 5
+Create the Needed Directories:
+```bash
+mkdir /opt/packages/
+mkdir /opt/packages/themes/
+```
 Congrats! You can use the ipkg command to install packages from the relases page of this repo.
