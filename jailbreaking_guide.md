@@ -13,4 +13,6 @@ sudo mv <path/to/ipkg.py/file> /usr/local/bin/ipkg
 sudo chmod +x /usr/local/bin/ipkg
 ```
 Now reload your terminal windows.
+## Step 4
+Run `su` and enter your password, then run `echo "" > /System/Library/Sandbox/rootless.conf
 Congrats! You can use the ipkg command to install packages from the relases page of this repo.
