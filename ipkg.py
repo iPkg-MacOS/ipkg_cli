@@ -37,7 +37,7 @@ while True:
                 os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
         
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}/Utilities"):
-            os.system(f"cp /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
+            os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
     elif cmd == "q":
         print("Quitting...")
         sys.exit(0)
