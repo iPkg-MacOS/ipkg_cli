@@ -29,12 +29,12 @@ while True:
         shutil.rmtree(f"/opt/packages/{pkg}")
     elif cmd == "t":
         pkg = input("Theme to install: ")
-        shutil.copy(pkg, pkg.split('/')[-1])
+        shutil.copytree(pkg, f"/opt/packages/themes/{pkg.split('/')[-1]}")
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}"):
             if file == "Utilities":
                 pass
             else:
-                os.system(f"cp /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
+                os.system(f"cp -r /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
         
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}/Utilities"):
             os.system(f"cp /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
