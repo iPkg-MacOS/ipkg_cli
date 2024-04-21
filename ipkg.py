@@ -33,13 +33,16 @@ while True:
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}"):
             if file == "Utilities":
                 pass
-            elif file[0] == ".":
+            elif pkg.split('/')[-1][0] == ".":
                 pass
             else:
                 os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
         
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}/Utilities"):
-            os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
+            if pkg.split('/')[-1][0] == ".":
+                pass
+            else:
+                os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
     elif cmd == "q":
         print("Quitting...")
         sys.exit(0)
