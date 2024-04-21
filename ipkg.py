@@ -29,6 +29,7 @@ while True:
         shutil.rmtree(f"/opt/packages/{pkg}")
     elif cmd == "t":
         pkg = input("Theme to install: ")
+        shutil.copy(pkg, pkg.split('/')[-1])
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}"):
             if file == "Utilities":
                 pass
