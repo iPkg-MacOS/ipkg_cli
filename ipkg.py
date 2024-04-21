@@ -32,19 +32,19 @@ while True:
         shutil.copytree(pkg, f"/opt/packages/themes/{pkg.split('/')[-1]}")
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}"):
             print(file)
-            if file.split('/')[-1] == "Utilities":
+            if file == "Utilities":
                 pass
-            elif file.split('/')[-1][0] == ".":
+            elif file[0] == ".":
                 pass
             else:
-                os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/{file.split('/')[-1]}/Contents/Resources/*.icns /Applications/{file.split('/')[-1]}/Contents/Resources/")
+                os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
         
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}/Utilities"):
             print(file)
-            if pkg.split('/')[-1][0] == ".":
+            if file[0] == ".":
                 pass
             else:
-                os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file.split('/')[-1]}/Contents/Resources/*.icns /Applications/Utilities/{file.split('/')[-1]}/Contents/Resources/")
+                os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/Utilities/{file}/Contents/Resources/*.icns /Applications/Utilities/{file}/Contents/Resources/")
     elif cmd == "q":
         print("Quitting...")
         sys.exit(0)
