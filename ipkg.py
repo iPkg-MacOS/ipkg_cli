@@ -33,6 +33,8 @@ while True:
         for file in os.listdir(f"/opt/packages/themes/{pkg.split('/')[-1]}"):
             if file == "Utilities":
                 pass
+            elif file[0] == ".":
+                pass
             else:
                 os.system(f"cp -R /opt/packages/themes/{pkg.split('/')[-1]}/{file}/Contents/Resources/*.icns /Applications/{file}/Contents/Resources/")
         
